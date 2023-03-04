@@ -1,0 +1,38 @@
+Algoritmo despalzar_elementos
+    # La copia de 't' donde se mueven los elementos uno a la izquierda
+
+Entrada
+    t: TABLA[T]
+    inicio, fin: ENTERO # Rango de elementos a desplazar
+    k: ENTERO # Elemento a desplazar
+    i: ENTERO # Posición del elemento a desplazar
+    e1: ENTERO # Primer elemento antes de desplazar
+    e2: ENTERO # último elemento despues de desplazar
+
+Resultado: TABLA[T] # Copia de 't' con los elementos desplazados
+
+precondición
+    inicio ≤ k ≤ fin
+    índice_válido(t, inicio)
+    índice_válido(t, fin)
+    está_definido(t, inicio, fin)
+    k = elemento a desplazar
+
+Pseudocódigo
+    para i ← k hasta fin - 1 hacer
+        t[i] ← t[i + 1]
+    fin para
+    t[fin] ← 0
+    e1 = e2
+
+poscondición
+    resultado = copia de 't' con los elementos desplazados
+    resultado[inicio] = t[inicio]
+    resultado[fin] = 0
+    resultado[k] = t[k + 1]
+    resultado[i] = t[i + 1] para todo i ∈ [k + 1, fin - 1]
+    resultado[i] = t[i] para todo i ∈ [inicio, k - 1] ∪ [fin + 1, fin]
+    e1 = e2
+
+
+fin despalzar_elementos
