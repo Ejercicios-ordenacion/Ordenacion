@@ -1,29 +1,27 @@
 Algoritmo orden_ascendente
-    # Ordenar 't[inicio .. fin]' en orden creciente.
+    # Ordenar 't[inicio .. fin]' en orden ascendente.
 
 Entrada
-    t: TABLA[T images/flechedroite.png COMPARABLE] # El objetivo de la ordenación
-    inicio, fin: ENTERO # Números de los componentes extremos a ordenar
+    t: TABLA[T] # Tabla a ordenar
+    inicio, fin: ENTER # Índices de inicio y fin de la parte a ordenar
 
-precondición
+Precondición
     índice_válido(t, inicio)
     índice_válido(t, fin)
     inicio ≤ fin
     está_definido(t, inicio, fin)
 
+Inicio orden_descendente
+    para i desde inicio hasta fin hacer
+        para j desde i+1 hasta fin hacer
+            si t[j] < t[i] entonces
+                intercambiar t[i] y t[j]
+            fin si
+        fin para
+    fin para
+
 poscondición
-    # La parte ordenada es igual a la antigua
-    es_igual_a(t, inicio, fin, antiguo(t), inicio, fin)
+    está_definido(t, inicio, fin)
+    para todo i, j en [inicio, fin] tal que i < j se cumple t[i] ≤ t[j]
 
-    # Está ordenada en orden creciente
-    está_ordenada_en_orden_ascendente(t, inicio, fin)
-
-    # Las partes no ordenadas se quedan idénticas
-    índice_min(t) < inicio =>
-      son_idénticos
-        (t, índice_min(t), inicio - 1, antiguo(t), índice_min(t), inicio - 1)
-    fin < índice_max(t) =>
-      son_idénticos
-        (t, fin + 1, índice_max(t), antiguo(t), fin + 1, índice_max(t))
-
-fin orden_ascendente
+Fin orden_ascendente
