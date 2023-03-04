@@ -1,0 +1,25 @@
+Algoritmo copia_de_seguridad
+    # Realiza una copia del número más grande de la tabla
+
+Entrada
+    t: TABLA[T]
+    inicio, fin: ENTERO
+    mi(máximo): ENTERO
+
+Resultado: Entero
+
+precondición
+    inicio >= 1
+    fin <= t.tamaño
+    inicio <= fin
+
+Pseudocódigo
+    mi = t[di]
+    para i <= di + 1 # hasta el final de la tabla
+        si t[di] > mi entonces # es el número más grande de la tabla
+            mi = t[di] # lo guardamos en la variable mi
+        fin si
+    fin para
+    copia_de_seguridad = mi
+
+fin copia_de_seguridad
