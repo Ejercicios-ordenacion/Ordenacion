@@ -27,7 +27,7 @@ Este ejercicio es difícil, constituye un buen ejemplo de análisis/concepción 
 ## 2. Una ordenación topológica
 Consideramos n tareas t1, t2… tn sometidas a las restricciones anteriores. Es decir, hay que terminar algunas tareas antes de poder empezar otras. Así, por ejemplo, primero tenemos que preparar los cimientos de una casa antes de montar las paredes y los tabiques. En el ejercicio siguiente se propone calcular una ordenación de tareas sometidas a restricciones de prioridad.
 
-Ejercicio 5: Ordenación topológica
+### Ejercicio 5: Ordenación topológica
 
 Una restricción se expresa mediante un par (i,j) de números enteros comprendidos entre 1 y n, que indica que la tarea ti va antes que la tarea tj. Es decir, la tarea ti debe estar terminada antes de empezar la tarea tj. La relación binaria «... precede ...» así definida en el conjunto de las n tareas es una relación de orden parcial: algunas tareas no son comparables.
 
@@ -38,7 +38,7 @@ Está claro que no se pueden cumplir todas las restricciones. En este caso, no h
 ## 3. Completar las especificaciones
 La sección «Algunos algoritmos simples» ha usado un predicado está_explorado que no se ha especificado completamente. En particular, hemos escrito: «cada componente de t[inicio .. fin] está colocado después de la serie más grande de componentes de la que es el max». El ejercicio siguiente propone completar esta especificación. Es un problema difícil.
 
-Ejercicio 6: Especificación de está_explorado
+### Ejercicio 6: Especificación de está_explorado
 
 Escribir las especificaciones del predicado está_explorado.
 
