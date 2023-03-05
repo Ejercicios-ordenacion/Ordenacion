@@ -30,9 +30,13 @@ while no_predecesores:  # mientras no haya predecesores
     orden.append(n) # añadirlo al orden topológico
 
 for m in sucesores[n]:
-    predecesores[m].remove(n)  # eliminar de la lista de predecesores
+    predecesores[m].remove(n)  # eliminar el vértice de la lista de predecesores de sus predecesores
 
 if not predecesores[m]:
-    no_predecesores.append(m)  # si no tiene más sucesores, añadirlo a la lista sin predecesores
+    no_predecesores.append(m)  # si no tiene más sucesores, añadirlo a la lista de vértices sin predecesores
+
+if any(predecesores.values()):  # si quedan vértices con predecesores quiere devir que hay un ciclo en el grafo
+    return ("No es posible encontrar una ordenación topológica.")
+
 
 
