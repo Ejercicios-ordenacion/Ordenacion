@@ -17,4 +17,8 @@ def ord_topologica(n, restricciones):
     # diccionario para  almacenar los predecesores
     predecesores = {i: [] for i in range(1, n+1)}
 
+for i,j in restricciones: # rellenar con los diccionarios
+    sucesores[i].append(j)
+    predecesores[j].append(i)
+
     
