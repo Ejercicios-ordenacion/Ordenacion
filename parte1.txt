@@ -1,0 +1,4 @@
+Entrada: tabla t 
+Precondición: La tabla t contiene elementos de tipo T comparables.
+Resultado: tabla con elementos ordenados de menor a mayor
+Postcondición: La tabla t está ordenada de manera ascendente en su lugar, es decir, los elementos han sido reordenados dentro de la misma tabla sin utilizar una tabla auxiliar.

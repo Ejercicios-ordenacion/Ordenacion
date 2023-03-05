@@ -1,0 +1,11 @@
+Entrada: 
+tabla t
+tabla r
+
+Precondición:
+t es una tabla de una sola línea de elementos de tipo T COMPARABLE
+r es una tabla de una sola línea de elementos de tipo T COMPARABLE con el mismo numero de elementos que t
+
+Postcondición:
+los elementos de la tabla t están ordenados en orden creciente
+la tabla r contiene una copia de los elementos de la tabla t ordenados en orden creciente
