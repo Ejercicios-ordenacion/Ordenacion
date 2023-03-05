@@ -11,6 +11,10 @@ Salida: ordenación topológica de las tareas (si es quue es posible encontrar u
 '''''
 
 def ord_topologica(n, restricciones):
-    # diccionario para ir almacenando
-    sucesor = {i: [] for i in range(1, n+1)}
+    # diccionario para almacenar sucesores
+    sucesores = {i: [] for i in range(1, n+1)}
+
+    # diccionario para  almacenar los predecesores
+    predecesores = {i: [] for i in range(1, n+1)}
+
     
