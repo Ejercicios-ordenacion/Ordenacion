@@ -32,4 +32,7 @@ while no_predecesores:  # mientras no haya predecesores
 for m in sucesores[n]:
     predecesores[m].remove(n)  # eliminar de la lista de predecesores
 
-    
+if not predecesores[m]:
+    no_predecesores.append(m)  # si no tiene más sucesores, añadirlo a la lista sin predecesores
+
+
