@@ -39,4 +39,4 @@ if any(predecesores.values()):  # si quedan vértices con predecesores quiere de
     return ("No es posible encontrar una ordenación topológica.")
 
 
-
+return orden  # Finalmente devolver el orden topológico
