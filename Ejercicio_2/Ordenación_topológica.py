@@ -21,9 +21,11 @@ for i,j in restricciones: # rellenar con los diccionarios los sucesores y predec
     sucesores[i].append(j)
     predecesores[j].append(i)
 
-    no_predecesores = [v for v in predecesores if not predecsores [v]]  # lista para cuando no hay predecesores
+no_predecesores = [n for n in predecesores if not predecsores [n]]  # lista para cuando no hay predecesores
 
-    orden = []  # lista vacía para el orden topológico
+orden = []  # lista vacía para el orden topológico
 
+while no_predecesores:  # mientras no haya predecesores
+    n = no_predecesores.pop() # elimina y devuelve el elemneto de la lista
+    orden.append(n) # añadirlo al orden topológico
     
-
