@@ -28,4 +28,8 @@ orden = []  # lista vacía para el orden topológico
 while no_predecesores:  # mientras no haya predecesores
     n = no_predecesores.pop() # elimina y devuelve el elemneto de la lista
     orden.append(n) # añadirlo al orden topológico
+
+for m in sucesores[n]:
+    predecesores[m].remove(n)  # eliminar de la lista de predecesores
+
     
